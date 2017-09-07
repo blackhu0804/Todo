@@ -1,11 +1,13 @@
 import _ from 'lodash';
+import $ from 'jquery';
+
 
 function compoent(){
-    var element = document.createElement('div');
+    var element = $('<div></div>');
 
-    element.innerHTML = _.join(['hello','webpack'],' ');
+    element.html(_.join(['hello', 'webpack'], ' '));
 
-    return element;
+    return element.get(0);
 }
 
 document.body.appendChild(compoent());
