@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  <h1>Hello, this is my first react page!</h1>,
   document.getElementById('root2')
 );
 
