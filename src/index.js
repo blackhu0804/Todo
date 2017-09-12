@@ -6,6 +6,6 @@ import registerServiceWorker from './registerServiceWorker';
 import Welcome from './Welcome'
 
 ReactDOM.render(
-  <Welcome/>,
+  <Welcome name="Brain"/>,
   document.getElementById('root')
 )
