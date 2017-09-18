@@ -8,10 +8,12 @@ class Welcome extends React.Component {
       test: '1'
     }
 
-    this.setState({
-      date: new Date(), //更新date
-      test: 'constructor'
-    })
+    setInterval( () => {
+      this.setState({
+        date: new Date(),
+        test: 'render'
+      })
+    },5000)
 
     console.log("我已经在 constructor 里将 props 和state 初始化好了");
   }
@@ -23,10 +25,7 @@ class Welcome extends React.Component {
     console.log("运行到这里的话，说明马上要运行 render 了");
   }
   render(){
-    this.setState({
-      date: new Date(),
-      test: 'render'
-    })
+    
 
     console.log("恩，这里是render");
 
@@ -59,20 +58,15 @@ class Welcome extends React.Component {
       date: new Date(),
       test: 'shouldComponentUpdate'
     })
+    return true;
   }
 
   componentWillUpdate(){
-    this.setState({
-      date: new Date(),
-      test: 'componentWillUpdate'
-    })
+
   }
 
   componentDidUpdate(){
-    this.setState({
-      date: new Date(),
-      test: 'componentDidUpdate'
-    })
+
   }
 
   componentWillUnmount(){
