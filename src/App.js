@@ -10,8 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       newTodo: '',
-      todoList: [
-
+      todoList: [     
       ]
     }
   }
@@ -22,24 +21,23 @@ class App extends Component {
       return (
         <li key={index}>
           <TodoItem todo={item} />
-        </li>      
+        </li>
       )
     })
-    console.log(todos);
 
     return (
       <div className="App">
         <h1>我的待办</h1>
         <div className="inputWrapper">
-          <TodoInput content={this.state.newTodo}
+          <TodoInput content={this.state.newTodo} 
           onChange={this.changeTitle.bind(this)}
-          onSubmit={this.addTodo.bind(this)} />  
+          onSubmit={this.addTodo.bind(this)} />
         </div>
         <ol>
           {todos}
         </ol>
       </div>
-    );
+    )
   }
   changeTitle(event) {
     this.setState({
@@ -58,7 +56,7 @@ class App extends Component {
       newTodo: '',
       todoList: this.state.todoList
     })
-  }
+  } 
 }
 
 export default App;
