@@ -10,6 +10,12 @@
   box-shadow: 0 0 1em hsla(0,0%,0%,0.15);
 }
 
+.App > .todoList > li:nth-child(odd) {
+  background-color: aquamarine;
+}
+.App > .todoList > li:nth-child(even) {
+  background-color: aqua;
+}
 body {
   background-color: #ddd;
 }
