@@ -4,14 +4,14 @@ import './reset.css'
 import 'normalize.css'
 import TodoInput from './TodoInput'
 import TodoItem from './TodoItem'
-import * as localStore from './localStorage'
+import UserDialog from './UserDialog'
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
       newTodo: '',
-      todoList: localStore.load('todoList') || []
+      todoList: []
     }
   }
 
@@ -39,12 +39,13 @@ class App extends Component {
         <ol className="todoList">
           {todos}
         </ol>
+        <UserDialog />
       </div>
     )
   }
   componentDidUpdate(){
     //在组件更新后调用
-    localStore.save('todoList', this.state.todoList)     
+    // localStore.save('todoList', this.state.todoList)     
   }
   toggle(e, todo){
     todo.status = todo.status === 'completed' ? '' : 'completed'
