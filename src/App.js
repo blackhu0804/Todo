@@ -44,7 +44,7 @@ class App extends Component {
         <ol className="todoList">
           {todos}
         </ol>
-        {this.state.user.id ? null : <UserDialog onSignUp={this.onSignUp.bind(this)}/>}
+        {this.state.user.id ? null : <UserDialog onSignUp={this.onSignUpOrSignIn.bind(this)} onSignIn={this.onSignUpOrSignIn.bind(this)} />}
       </div>
     )
   }
@@ -54,11 +54,10 @@ class App extends Component {
     stateCopy.user = {}
     this.setState(stateCopy)
   }
-  onSignUp(user){
+  onSignUpOrSignIn(user){
     let stateCopy = JSON.parse(JSON.stringify(this.state))
     stateCopy.user = user
     this.setState(stateCopy)
-    console.log(this.state.user.username)
   }
   componentDidUpdate(){
     //在组件更新后调用
