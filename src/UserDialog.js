@@ -140,6 +140,7 @@ export default class UserDialog extends Component {
           </div>
           <div className="row actions">
             <button type="submit">发送重置邮件</button>
+            <a href="#" onClick= {this.returnTosignIn.bind(this)} >返回登录</a>
           </div>
         </form>
       </div>
@@ -162,5 +163,10 @@ export default class UserDialog extends Component {
   resetPassword(e){
     e.preventDefault()
     sendPasswordResetEmail(this.state.formData.email)
+  }
+  returnTosignIn(){
+    let stateCopy = JSON.parse(JSON.stringify(this.state))
+    stateCopy.selectedTab = 'signInOrSignUp'
+    this.setState(stateCopy)
   }
 }
