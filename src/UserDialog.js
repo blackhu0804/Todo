@@ -11,6 +11,7 @@ export default class UserDialog extends Component {
       formData: {
         username: '',
         password: '',
+        email: '',
       }
     }
   }
@@ -21,12 +22,15 @@ export default class UserDialog extends Component {
   }
   signUp(e) {
     e.preventDefault()
-    let {username, password} = this.state.formData
+    let {username, password, email} = this.state.formData
     let success = (user) => {
       this.props.onSignUp.call(null, user)
     }
     let error = (error) => {
       switch(error.code){
+        case 201:
+          alert('没有提供密码，或者密码为空')
+          break
         case 202:
           alert('用户名已被占用')
           break
@@ -35,7 +39,7 @@ export default class UserDialog extends Component {
           break
       }
     }
-    signUp(username, password, success, error)
+    signUp(username, password, email, success, error)
   }
   signIn(e) {
     e.preventDefault()
@@ -47,6 +51,9 @@ export default class UserDialog extends Component {
       switch(error.code){
         case 210:
           alert('用户名与密码不匹配')
+          break
+        case 211:
+          alert('找不到该用户')
           break
         default:
           alert(error)
@@ -71,6 +78,10 @@ export default class UserDialog extends Component {
           <label>密码</label>
           <input type="password" value={this.state.formData.password} onChange={this.changeFormData.bind(this, 'password')} />
         </div>
+        <div className="row">
+          <label>邮箱</label>
+          <input type="text" value={this.state.formData.email} onChange={this.changeFormData.bind(this, 'email')} />
+        </div>
         <div className="row actions">
           <button type="submit">注册</button>
         </div>
@@ -88,6 +99,7 @@ export default class UserDialog extends Component {
         </div>
         <div className="row actions">
           <button type="submit">登录</button>
+          <a href="javascript:;">忘记密码了？</a>
         </div>
       </form>
     )
