@@ -24,7 +24,7 @@ class App extends Component {
       })
     }
   }
-  
+
   render() {
 
     let todos = this.state.todoList
@@ -99,8 +99,10 @@ class App extends Component {
     })
   } 
   delete(e, todo) {
-    todo.deleted = true
-    this.setState(this.state)
+    TodoModel.destory(todo.id, () => {
+      todo.deleted = true
+      this.setState(this.state)
+    })
   }
 }
 
