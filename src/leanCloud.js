@@ -20,17 +20,40 @@ export function signIn(username, password, successFn, errorFn){
   })
 }
 
-export function signUp(username, password, email, successFn, errorFn) {
-  var user = new AV.User()
+export const TodoModel = {
+  create({status, title, deleted}, successFn, errorFn){
+    let Todo = AV.Object.extend('Todo')
+    let todo = new Todo()
+    todo.set('title', title)
+    todo.set('status', status)
+    todo.set('deleted', deleted)
+    todo.save().then(function (response){
+      successFn.call(null, response.id)
+    }, function(error){
+      errorFn && errorFn.call(null, error)
+    });
+  },
+  update(){
 
+  },
+  destory(){
+
+  }
+}
+
+export function signUp(email, username, password, successFn, errorFn){
+  var user = new AV.User()
+  // 设置用户名
   user.setUsername(username)
+  // 设置密码
   user.setPassword(password)
+  // 设置邮箱
   user.setEmail(email)
 
   user.signUp().then(function (loginedUser) {
     let user = getUserFromAVUser(loginedUser)
     successFn.call(null, user)
-  },function(error) {
+  }, function (error) {
     errorFn.call(null, error)
   })
 
