@@ -72,8 +72,14 @@ class App extends Component {
     // localStore.save('todoList', this.state.todoList)     
   }
   toggle(e, todo){
+    let oldStatus = todo.status
     todo.status = todo.status === 'completed' ? '' : 'completed'
-    this.setState(this.state)    
+    TodoModel.update(todo, () => {
+      this.setState(this.state)
+    }, (error) => {
+      todo.status = oldStatus
+      this.setState(this.state)
+    })
   }
   changeTitle(event) {
     this.setState({
@@ -84,7 +90,7 @@ class App extends Component {
   addTodo(event) {
     let newTodo = {
       title: event.target.value,
-      status: null,
+      status: '',
       deleted: false
     }
     TodoModel.create(newTodo, (id) => {
