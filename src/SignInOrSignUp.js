@@ -20,16 +20,17 @@ render() {
   return (
     <div className="signInOrSignUp">
       <nav>
-        <label>
-          <input type="radio" value="signUp" 
+        
+        <input id="signIn" type="radio" value="signUp" 
             checked={this.state.selected === 'signUp'}
             onChange={this.switch.bind(this)} />
+        <label htmlFor="signIn" >{/*注意jsx中html的for要写成htmlFor*/}
           注册
         </label>
-        <label>
-          <input type="radio" value="signIn" 
+        <input id="signUp" type="radio" value="signIn" 
             checked={this.state.selected === 'signIn'}
             onChange={this.switch.bind(this)} /> 
+        <label htmlFor="signUp">
           登录
         </label>
       </nav>

@@ -1,0 +1,37 @@
+.signUp input{
+  border-radius: 3px;
+  transition: all .5s;
+  background-color: rgba(234, 231, 231, 0.54);
+  border: 1px solid pink;
+  color: #E79797;
+  font-size: 14px;
+  margin: 0 0 10px;
+  padding: 10px 20px;
+  width: 80%;
+}
+.signUp input:focus {
+  background-color: #fff;
+  border: 2px solid rgba(240, 55, 129, 0.5);
+  outline: none;
+  box-shadow:5px 2px 10px rgba(243, 205, 205, 0.44);
+}
+.signUp  .row>label {
+  font-family: YouYuan;
+  margin-top: 5px;
+  color: #E79797;
+}
+.signUp button[type="submit"] {
+  color: #463939;
+  width: 150px;
+  height: 40px;
+  background: rgba(248, 148, 148, 0.5);
+  border-radius: 30px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
+  border: 1px solid #D69E31;
+  cursor: pointer;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  transition: .3s;
+}
+.signUp button[type="submit"]:hover {
+  background: rgba(248, 148, 148, 1);
+}

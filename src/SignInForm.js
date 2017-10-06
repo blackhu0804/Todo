@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './SignInForm.css'
 export default class SignInForm extends Component {
   render() {
     return (
@@ -14,7 +14,7 @@ export default class SignInForm extends Component {
         </div>
         <div className="row actions">
           <button type="submit">登录</button>
-          <a href="#" onClick={this.props.onForgotPassword} >忘记密码了？</a>
+          <a className="forgot-pwd" href="#" onClick={this.props.onForgotPassword} >忘记密码了？</a>
         </div>
       </form>
     )

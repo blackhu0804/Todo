@@ -7,6 +7,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #F3E6E6;
+  border: 1px solid #E9A3A3;
 }
 
 .UserDialog {
@@ -14,7 +16,7 @@
   border-radius: 4px;
   min-width: 20px;
   background-color: #fff;
-  box-shadow: 0 0 1em hsla(0,0%,0%,0.35);
+  box-shadow: 0 0 1em rgba(83, 72, 72, 0.35);
 }
 
 .UserDialog .signInOrSignUp > nav:first-child {
@@ -30,9 +32,55 @@
 }
 .UserDialog .forgotPassword > h3 {
   padding: 1em;
+  color: rgb(223, 117, 182);
 }
 .UserDialog .forgotPassword > form {
   padding: 0 1em 1em;
+}
+.UserDialog .forgotPassword > form input {
+  border-radius: 3px;
+  transition: all .5s;
+  background-color: rgba(234, 231, 231, 0.54);
+  border: 1px solid pink;
+  color: #E79797;
+  font-size: 14px;
+  margin: 0 0 10px;
+  padding: 10px 20px;
+  width: 80%;
+}
+.UserDialog .forgotPassword > form input:focus {
+  background-color: #fff;
+  border: 2px solid rgba(240, 55, 129, 0.5);
+  outline: none;
+  box-shadow:5px 2px 10px rgba(243, 205, 205, 0.44);
+}
+.UserDialog .forgotPasswordForm>.row>label {
+  font-family: YouYuan;
+  margin-top: 5px;
+  margin-left: 3px;
+  color: #E79797;
+}
+.UserDialog form>.row.actions button {
+  color: #463939;
+  width: 150px;
+  height: 40px;
+  background: rgba(248, 148, 148, 0.5);
+  border-radius: 30px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
+  border: 1px solid #D69E31;
+  cursor: pointer;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  transition: .3s;
+}
+.UserDialog form>.row.actions button:hover {
+  background: rgba(248, 148, 148, 1);
+}
+.UserDialog form>.row.actions a{
+  color: #E79797;
+  transition: .3s;
+}
+.UserDialog form>.row.actions a:hover{
+  color: rgb(223, 117, 182);
 }
 .UserDialog > nav:first-child input[type="radio"]:not(:first-child) {
   margin-left: 2em;
@@ -56,4 +104,25 @@
 .UserDialog button {
   font: inherit;
   padding: .2em;
+}
+.UserDialog nav {
+  display: flex;
+  justify-content: center;
+}
+.UserDialog nav>label {
+  color: #463939;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  background-color: #f3e6e6;
+  border-radius: 5px;
+  transition: .3s;
+}
+.UserDialog nav input {
+  display: none;
+}
+.UserDialog nav>label:hover {
+  border: 1px solid #EBA141;
+}
+.signInOrSignUp nav input:checked+label {
+  background-color: #F89494;
 }
