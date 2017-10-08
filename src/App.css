@@ -1,26 +1,107 @@
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_434821_t7op2hm56y2v5cdi.eot?t=1507467182292'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_434821_t7op2hm56y2v5cdi.eot?t=1507467182292#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAXIAAsAAAAACGwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZXQkhhY21hcAAAAYAAAABlAAABnM8yawhnbHlmAAAB6AAAAdwAAAIwepfGd2hlYWQAAAPEAAAAMQAAADYPH8SxaGhlYQAAA/gAAAAgAAAAJAfeA4ZobXR4AAAEGAAAABAAAAAQD+r//2xvY2EAAAQoAAAACgAAAAoBjgDAbWF4cAAABDQAAAAfAAAAIAETAF1uYW1lAAAEVAAAAUUAAAJtPlT+fXBvc3QAAAWcAAAALAAAAD1QYMU6eJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2Bk/s04gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVDwrYW7438AQw9zAcAUozAiSAwAv5Q03eJzFkMENgCAMRX8pGjCO4tE4kCcH4MDEXQPbwoUJ+OSV9ucnJQDYALByKRGgDwTTqy65zzjcj3h0TnqC3lWylNamzkSeSN6xJWnHMtG61bNOr/eY7L/rQJ8ouWO+lA7CD0e6EWcAAAB4nE2Qu24TQRSGz5nNzq73au9t7HV8mV28A4qxhLP2IgUcoSChIAoQFSUPYJQuDRJpkIhEEV4BRfJLpKChd0HjhigiZSoeYMwYhJTR0Zw5o+8/+vWDDrC+0i60JoRwFx7AU3gJgHQHM490kItyRHYw5nrMIk8TueBGno20x8gyGiXjaVkwalAfPeziLh9PxYgInJQzsofjpIPYaqevg8F2oJ2h1RTdj/I5+YpxL9/2Z/fl4XA/GvdD89gJglYQfDaprpuEbPkezllS02sWlee6n8YXvXukh05LpC/euP128PZT+a4zYDXEkxMM231vsd9IG6rep0kYtIy6azZTN78T4fG13QydTvEL1NHW6/VwC7Uh2MAgB9ALEFOoEmAUNAqGeqixAM0QBjNYxSpREVjJS0qRr1aY6br8uVrKGzVHyyVGlMqbZ6enj/7Xj38cV/+XK6XTrhWwvCWQV7fojSfy11hJXkEED1XyfJNpzit1Zz6yTcQCuYdGvDuZYcW7GIcRzXlWiIkRd5HxGU4aZYEFPjFt25TfDqjt0/mc+jbFc/m9HuEAHQtdy0G3Jn+rNsCojnv1OMbErlsHG/LoiDoexQ8Y+4szhSiFFJbrWl9woTYoATH8GOAPzztsA3icY2BkYGAAYs91q3Pj+W2+MnCzMIDANQaHdTD6////OiyMzDpALgcDE0gUAC2VCq8AAAB4nGNgZGBgbvjfwBDDwvj/PwMDCyMDUAQFsAAAdgcEbQQAAAAD6QAABAH//wQAAAAAAAAAAHYAwAEYAAB4nGNgZGBgYGEIZGBlAAEmIOYCQgaG/2A+AwAREgFxAHicZY9NTsMwEIVf+gekEqqoYIfkBWIBKP0Rq25YVGr3XXTfpk6bKokjx63UA3AejsAJOALcgDvwSCebNpbH37x5Y08A3OAHHo7fLfeRPVwyO3INF7gXrlN/EG6QX4SbaONVuEX9TdjHM6bCbXRheYPXuGL2hHdhDx18CNdwjU/hOvUv4Qb5W7iJO/wKt9Dx6sI+5l5XuI1HL/bHVi+cXqnlQcWhySKTOb+CmV7vkoWt0uqca1vEJlODoF9JU51pW91T7NdD5yIVWZOqCas6SYzKrdnq0AUb5/JRrxeJHoQm5Vhj/rbGAo5xBYUlDowxQhhkiMro6DtVZvSvsUPCXntWPc3ndFsU1P9zhQEC9M9cU7qy0nk6T4E9XxtSdXQrbsuelDSRXs1JErJCXta2VELqATZlV44RelzRiT8oZ0j/AAlabsgAAAB4nGNgYoAALgbsgIWRiZGZkYWRlYGxgi0lNSe1JJWtpDQzOaOUgQEAOiQFrQ==') format('woff'),
+  url('//at.alicdn.com/t/font_434821_t7op2hm56y2v5cdi.ttf?t=1507467182292') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_434821_t7op2hm56y2v5cdi.svg?t=1507467182292#iconfont') format('svg'); /* iOS 4.1- */
+}
+#root {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #F5EEEE;;
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-delete:before { content: "\e674"; }
+
+.icon-tuichu:before { content: "\e609"; }
+
+.main .header {
+  margin: 20px; 
+  font-size: 100px;
+  font-weight: 600;
+  text-align: center;
+  font-style: italic;
+  color: rgba(175, 47, 47, 0.15);
+}
 .App {
   color: #333;
   border: 1px solid #aaa;
   border-radius: 4px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.73);
   margin: 2em;
   padding: 0 1em;
   min-height: 20em;
   min-width: 32em;
   box-shadow: 0 0 1em hsla(0,0%,0%,0.15);
 }
-
-.App > .todoList > li:nth-child(odd) {
-  background-color: aquamarine;
+.App h1{
+  font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive;
+  color: #E79797;
+  padding: 20px 10px;
+  opacity: .8;
+  font-style: italic;
 }
-.App > .todoList > li:nth-child(even) {
-  background-color: aqua;
+.App h1>a {
+  float: right;
+  line-height: .9;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: .5s;
 }
-body {
-  background-color: #ddd;
+.App h1>a:hover {
+  color: #EC5B5B;
 }
-#root {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
+.App .inputWrapper .TodoInput {
+  padding: 10px 15px;
+  color: #E79797;
+  font-weight: bold;
+  font-size: 20px;
+  transition: .5s;
+}
+.App .inputWrapper .TodoInput:focus {
+  outline: none;
+  border: 2px solid wheat;
+}
+.App .inputWrapper .TodoInput::-webkit-input-placeholder {
+  color: #ccc;
+  font-style: italic;
+  font-size: 23px;
+}
+.App .inputWrapper .TodoInput:-ms-input-placeholder{
+  color: #ccc;
+  font-style: italic;
+  font-size: 23px;  
+}
+.App > .todoList > li {
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1em;
+}
+.App .TodoItem>a {
+  font-size: 1.2em;
+  color: #E79797;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: .3s;
+}
+.App .todoList {
+  margin-bottom: 2em;
+}
+.App .TodoItem>a:hover {
+  color: #EC5B5B;
+}
+.App .TodoItem>input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+.App .TodoItem>input:checked + .title {
+  text-decoration: line-through;
+  color: #aaa;
 }

@@ -39,20 +39,23 @@ class App extends Component {
     })
 
     return (
-      <div className="App">
-        <h1>
-          {this.state.user.username||'我'}的待办
-          {this.state.user.id ? <button onClick={this.signOut.bind(this)}>登出</button> : null}
-        </h1>
-        <div className="inputWrapper">
-          <TodoInput content={this.state.newTodo} 
-          onChange={this.changeTitle.bind(this)}
-          onSubmit={this.addTodo.bind(this)} />
+      <div className="main">
+        <h1 className="header">todos</h1>
+        <div className="App">
+          <h1>
+            Welcome {this.state.user.username||'you'} !
+            {this.state.user.id ? <a className="iconfont icon-tuichu" onClick={this.signOut.bind(this)}></a> : null}
+          </h1>
+          <div className="inputWrapper">
+            <TodoInput content={this.state.newTodo} 
+            onChange={this.changeTitle.bind(this)}
+            onSubmit={this.addTodo.bind(this)} />
+          </div>
+          <ol className="todoList">
+            {todos}
+          </ol>
+          {this.state.user.id ? null : <UserDialog onSignUp={this.onSignUpOrSignIn.bind(this)} onSignIn={this.onSignUpOrSignIn.bind(this)} />}
         </div>
-        <ol className="todoList">
-          {todos}
-        </ol>
-        {this.state.user.id ? null : <UserDialog onSignUp={this.onSignUpOrSignIn.bind(this)} onSignIn={this.onSignUpOrSignIn.bind(this)} />}
       </div>
     )
   }
