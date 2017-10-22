@@ -81,14 +81,14 @@ export const TodoModel = {
   }
 }
 
-export function signUp(email, username, password, successFn, errorFn){
+export function signUp(username, password, email, successFn, errorFn){
   var user = new AV.User()
   // 设置用户名
   user.setUsername(username)
   // 设置密码
   user.setPassword(password)
   // 设置邮箱
-  //user.setEmail(email);
+  user.setEmail(email);
 
   user.signUp().then(function (loginedUser) {
     let user = getUserFromAVUser(loginedUser)
