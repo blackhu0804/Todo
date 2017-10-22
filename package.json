@@ -1,5 +1,5 @@
 {
-  "name": "webpack",
+  "name": "Todo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,5 +18,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://hu970804.github.io/webpack/build"
+  "homepage": "https://hu970804.github.io/Todo/build"
 }
